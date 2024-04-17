@@ -1,8 +1,6 @@
-import React from 'react';
-
 export default function AboutUs() {
   return (
-    <main>
+    <main className='px-40 mt-32'>
       <h1 className='text-purple-800 text-4xl font-semibold mb-4'>How it all began...</h1>
       <article className='text-justify leading-loose'>
         <p>

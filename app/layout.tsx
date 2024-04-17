@@ -3,6 +3,7 @@ import { Gelasio } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Particle from './components/BackgroundParticles/BackgroundParticles';
 
 const gelasio = Gelasio({
   subsets: ['latin'],
@@ -22,11 +23,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={gelasio.className}>
-        <div className='container mx-auto px-40'>
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <Particle />
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );

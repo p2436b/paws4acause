@@ -3,11 +3,11 @@ import Input from '../components/Input';
 
 export default function ContactUs() {
   return (
-    <main className='flex'>
-      <div className='relative grow'>
-        <Image src='/images/PawsForACauseLogo.png' fill objectFit='contain' alt='' />
+    <main className='flex gap-4 px-40  mt-32'>
+      <div className='relative grow w-full'>
+        <Image src='/images/pic_04.jpg' fill sizes='400px' alt='' className='object-cover rounded-md' />
       </div>
-      <form action='' className='flex flex-col gap-4 grow'>
+      <form action='' className='flex flex-col gap-4 grow w-full'>
         <Input placeholder='First Name' />
         <Input placeholder='Last Name' />
         <Input placeholder='Phone Number' type='tel' />

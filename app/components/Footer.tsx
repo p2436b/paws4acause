@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className='mt-10 font-semibold pb-8'>
+    <footer className='mt-10 font-semibold pb-8 px-40 z-10'>
       <div className='flex flex-col gap-2'>
         <h2>Get In Touch</h2>
         <p>Address: Alibeykoy İstanbul, Turkey</p>
