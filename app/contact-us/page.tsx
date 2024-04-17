@@ -3,7 +3,7 @@ import Input from '../components/Input';
 
 export default function ContactUs() {
   return (
-    <main className='flex gap-4 px-40  mt-32'>
+    <main className='flex gap-4 px-40  mt-48'>
       <div className='relative grow w-full'>
         <Image src='/images/pic_04.jpg' fill sizes='400px' alt='' className='object-cover rounded-md' />
       </div>

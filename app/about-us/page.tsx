@@ -1,9 +1,13 @@
+import Image from 'next/image'
+
 export default function AboutUs() {
   return (
-    <main className='px-40 mt-32'>
+    <main className='px-40 mt-48'>
       <h1 className='text-purple-800 text-4xl font-semibold mb-4'>How it all began...</h1>
       <article className='text-justify leading-loose'>
         <p>
+
+          <Image src='/images/pic_01.jpg' width={400} height={400} sizes='400px' className='float-end rounded-md object-fill ml-4' alt=''/>
           Our story begins with a shared love for animals and a deep-rooted passion for their welfare. Founded by a group of
           dedicated animal lovers, our shelter emerged from humble beginnings, fueled by the desire to make a difference in the
           lives of vulnerable animals.

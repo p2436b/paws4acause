@@ -1,6 +1,6 @@
 export default function AdoptDonate() {
   return (
-    <main className='px-40  mt-32'>
+    <main className='px-40 mt-48'>
       <article className='text-justify leading-loose'>
         <p>
           At Paws For a Cause, you have the opportunity to change lives by adopting, donating, or sponsoring an animal in need.
