@@ -1,9 +1,10 @@
-'use client'
+'use client';
 
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const navItems = [
   { title: 'Home', href: '/' },
@@ -15,7 +16,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setOpen]= useState(false)
+  const [isOpen, setOpen] = useState(false);
   return (
     <nav className='mb-10 font-semibold bg-white/50 backdrop-blur-md fixed top-0 z-50 w-full shadow-md'>
       <div className='flex justify-between items-center grow max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 h-24'>
@@ -34,19 +35,27 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button onClick={()=>setOpen(prevState => !prevState)}>
-          <Bars3Icon  className='size-6 md:hidden'/>
+        <button onClick={() => setOpen((prevState) => !prevState)}>
+          <Bars3Icon className='size-6 md:hidden' />
         </button>
-        {
-          isOpen ?
-        <ul className='absolute bg-white top-full w-full gap-8 md:hidden'>
-          {navItems.map((item) => (
-            <li key={item.href} className='text-gray-900' onClick={()=>setOpen(false)}>
-              <Link href={item.href}>{item.title}</Link>
-            </li>
-          ))}
-        </ul>:<></>
-}
+        <AnimatePresence>
+
+        {isOpen && (
+          <motion.div
+          initial={{ opacity: 0,  }}
+          animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='absolute top-full left-0 right-0 p-4 flex flex-col gap-8 md:hidden bg-white/85 backdrop-blur-md'>
+            <ul className='flex flex-col gap-8 '>
+              {navItems.map((item) => (
+                <li key={item.href} className='text-gray-900' onClick={() => setOpen(false)}>
+                  <Link href={item.href}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+        </AnimatePresence>
       </div>
     </nav>
   );
