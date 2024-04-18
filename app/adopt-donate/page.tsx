@@ -3,7 +3,7 @@ import Container from '../components/Container';
 export default function AdoptDonate() {
   return (
     <Container>
-      <main className='mt-10'>
+      <main className='mt-36 md:mt-10'>
         <article className='text-justify leading-loose'>
           <p>
             At Paws For a Cause, you have the opportunity to change lives by adopting, donating, or sponsoring an animal in need.

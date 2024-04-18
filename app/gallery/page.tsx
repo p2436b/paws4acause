@@ -5,7 +5,7 @@ import Container from '../components/Container';
 export default function Gallery() {
   return (
     <Container>
-      <main className='mt-10'>
+      <main className='mt-36 md:mt-10'>
         <PhotoGallery />
       </main>
     </Container>

@@ -6,7 +6,7 @@ import Container from './Container';
 export default function Footer() {
   return (
     <Container>
-      <footer className='flex gap-8 justify-between mt-10 font-semibold pb-8 z-10 border-t-2 pt-8'>
+      <footer className='flex flex-col md:flex-row gap-8 justify-between mt-10 font-semibold pb-8 z-10 border-t-2 pt-8'>
         <div>
           <div className='flex flex-col gap-2'>
             <h2 className='text-lg text-purple-800'>Get In Touch</h2>

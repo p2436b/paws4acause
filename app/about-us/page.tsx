@@ -4,7 +4,7 @@ import Container from '../components/Container';
 export default function AboutUs() {
   return (
     <Container>
-     <main className='mt-10'>
+      <main className='mt-36 md:mt-10'>
         <h1 className='text-purple-800 text-4xl font-semibold mb-4'>How it all began...</h1>
         <article className='text-justify leading-loose'>
           <p>

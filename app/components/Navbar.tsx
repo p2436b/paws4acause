@@ -1,3 +1,4 @@
+import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,18 +18,21 @@ export default function Navbar() {
         <Link href='/'>
           <div className='flex items-center gap-2'>
             <Image src='/images/logo.png' width={80} height={80} alt='Logo' />
-            <p className='text-gray-900'>
+            <p className='text-gray-900 hidden lg:block'>
               Where Every <span className='text-purple-800'>Paw</span> Finds <span className='text-purple-800'>Purpose</span>
             </p>
           </div>
         </Link>
-        <ul className='flex gap-4'>
+        <ul className='gap-4 hidden md:flex'>
           {navItems.map((item) => (
             <li key={item.href} className='text-gray-900'>
               <Link href={item.href}>{item.title}</Link>
             </li>
           ))}
         </ul>
+        <div>
+          <Bars3Icon  className='size-6 md:hidden'/>
+        </div>
       </div>
     </nav>
   );

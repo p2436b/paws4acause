@@ -6,7 +6,7 @@ import Container from '../components/Container';
 export default function ContactUs() {
   return (
     <Container>
-      <main className='flex gap-4 mt-10'>
+      <main className='flex gap-4 mt-36 md:mt-10'>
         <div className='relative grow w-full'>
           <Image src='/images/pic_04.jpg' fill sizes='400px' alt='' className='object-cover rounded-md shadow-md' />
         </div>
