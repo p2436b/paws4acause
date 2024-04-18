@@ -1,6 +1,9 @@
+'use client'
+
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const navItems = [
   { title: 'Home', href: '/' },
@@ -12,6 +15,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setOpen]= useState(false)
   return (
     <nav className='mb-10 font-semibold bg-white/50 backdrop-blur-md fixed top-0 z-50 w-full shadow-md'>
       <div className='flex justify-between items-center grow max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 h-24'>
@@ -30,9 +34,19 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div>
+        <button onClick={()=>setOpen(prevState => !prevState)}>
           <Bars3Icon  className='size-6 md:hidden'/>
-        </div>
+        </button>
+        {
+          isOpen ?
+        <ul className='absolute bg-white top-full w-full gap-8 md:hidden'>
+          {navItems.map((item) => (
+            <li key={item.href} className='text-gray-900' onClick={()=>setOpen(false)}>
+              <Link href={item.href}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>:<></>
+}
       </div>
     </nav>
   );
