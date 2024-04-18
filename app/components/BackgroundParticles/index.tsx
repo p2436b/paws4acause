@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
-import { options, options1 } from './options';
+import { options } from './options';
 
 export default function Particle() {
   const [init, setInit] = useState(false);
