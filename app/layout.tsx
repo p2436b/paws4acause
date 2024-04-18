@@ -3,7 +3,7 @@ import { Gelasio } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Particle from './components/BackgroundParticles/BackgroundParticles';
+import Particle from './components/BackgroundParticles';
 
 const gelasio = Gelasio({
   subsets: ['latin'],

@@ -1,5 +1,13 @@
 import React from 'react';
+import PhotoGallery from '../components/PhotoGallery';
+import Container from '../components/Container';
 
 export default function Gallery() {
-  return <div className='px-40  mt-48'>Gallery</div>;
+  return (
+    <Container>
+      <main className='mt-10'>
+        <PhotoGallery />
+      </main>
+    </Container>
+  );
 }

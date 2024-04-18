@@ -12,23 +12,24 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <nav className='flex justify-between items-center mb-10 font-semibold bg-black/25 backdrop-blur-md fixed top-0 z-50 w-full h-24 px-40'>
-      <Link href='/'>
-        <div className='flex items-center gap-2'>
-          <Image src='/images/PawsForACauseLogo.png' width={80} height={80} alt='Logo' />
-          <p className='text-white'>
-            Where Every <span className='text-purple-800'>Paw</span> Finds <span className='text-purple-700'>Purpose</span>
-          </p>
-        </div>
-      </Link>
-
-      <ul className='flex gap-4'>
-        {navItems.map((item) => (
-          <li key={item.href} className='text-white'>
-            <Link href={item.href}>{item.title}</Link>
-          </li>
-        ))}
-      </ul>
+    <nav className='mb-10 font-semibold bg-white/50 backdrop-blur-md fixed top-0 z-50 w-full shadow-md'>
+      <div className='flex justify-between items-center grow max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 h-24'>
+        <Link href='/'>
+          <div className='flex items-center gap-2'>
+            <Image src='/images/logo.png' width={80} height={80} alt='Logo' />
+            <p className='text-gray-900'>
+              Where Every <span className='text-purple-800'>Paw</span> Finds <span className='text-purple-800'>Purpose</span>
+            </p>
+          </div>
+        </Link>
+        <ul className='flex gap-4'>
+          {navItems.map((item) => (
+            <li key={item.href} className='text-gray-900'>
+              <Link href={item.href}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }

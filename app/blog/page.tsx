@@ -1,5 +1,10 @@
 import React from 'react';
+import Container from '../components/Container';
 
 export default function Blog() {
-  return <div className='px-40  mt-48'>Blog</div>;
+  return (
+    <Container>
+      <main className='mt-10'>Blog</main>
+    </Container>
+  );
 }
