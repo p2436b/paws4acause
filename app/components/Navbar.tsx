@@ -18,7 +18,7 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
   return (
-    <nav className='mb-10 font-semibold bg-white/50 backdrop-blur-md fixed top-0 z-50 w-full shadow-md'>
+    <nav className='mb-10 font-semibold bg-white/50 backdrop-blur-md fixed top-0 z-50 left-0 right-0 shadow-md'>
       <div className='flex justify-between items-center grow max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 h-24'>
         <Link href='/'>
           <div className='flex items-center gap-2'>
@@ -35,21 +35,20 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button onClick={() => setOpen((prevState) => !prevState)}>
-          <Bars3Icon className='size-6 md:hidden' />
+        <button className='md:hidden' onClick={() => setOpen((prevState) => !prevState)}>
+          <Bars3Icon className='size-6' />
         </button>
         <AnimatePresence>
-
         {isOpen && (
           <motion.div
           initial={{ opacity: 0,  }}
           animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className='absolute top-full left-0 right-0 p-4 flex flex-col gap-8 md:hidden bg-white/85 backdrop-blur-md'>
+            className='absolute top-full left-0 right-0 p-4 flex flex-col gap-8 md:hidden bg-white/95 shadow-md rounded-b-lg overflow-hidden'>
             <ul className='flex flex-col gap-8 '>
               {navItems.map((item) => (
                 <li key={item.href} className='text-gray-900' onClick={() => setOpen(false)}>
-                  <Link href={item.href}>{item.title}</Link>
+                  <Link className='block text-center' href={item.href}>{item.title}</Link>
                 </li>
               ))}
             </ul>
