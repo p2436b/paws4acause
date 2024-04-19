@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className='flex min-h-screen flex-col gap-4'>
       <div className='h-[550px] relative drop-shadow-lg'>
-        <Image src='/images/pic_02.jpg' fill alt='' className='object-cover' />
+        <Image src='/images/pic_02.jpg' fill alt='' sizes='600px' className='object-cover' />
       </div>
       <Container>
         <article>
@@ -27,7 +27,7 @@ export default function Home() {
             a time. Join us in our mission to make the world a better place for all creatures, great and small.
           </p>
         </article>
-        <div className='flex justify-center gap-8 my-16'>
+        <div className='flex flex-col md:flex-row justify-center gap-8 my-16'>
           {statistics.map((s, i) => (
             <StatisticsCard key={i} title={s.title} value={s.value} />
           ))}
