@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from '../components/Container';
-import PostCard from '../components/PostCard';
+import Container from '@/components/Container';
+import PostCard from '@/components/PostCard';
 
 const posts = [
   {

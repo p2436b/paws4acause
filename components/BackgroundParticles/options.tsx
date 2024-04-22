@@ -290,7 +290,7 @@ export const options : RecursivePartial<IOptions>= {
         mode: 'delete',
         value: 0,
       },
-      value: 80,
+      value: 50,
     },
     opacity: {
       value: {

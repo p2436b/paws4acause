@@ -1,6 +1,8 @@
 import Image from 'next/image';
-import Container from './components/Container';
-import StatisticsCard from './components/StatisticsCard';
+import Container from '@/components/Container';
+import StatisticsCard from '@/components/StatisticsCard';
+import TestimonialCard from '@/components/TestimonialCard';
+import Slider from '@/components/Slider';
 
 const statistics = [
   { title: 'Animals Rescued', value: 180 },
@@ -27,7 +29,7 @@ export default function Home() {
             a time. Join us in our mission to make the world a better place for all creatures, great and small.
           </p>
         </article>
-        <div className='flex justify-center gap-8 my-16'>
+        <div className='flex flex-col md:flex-row justify-center gap-8 my-16'>
           {statistics.map((s, i) => (
             <StatisticsCard key={i} title={s.title} value={s.value} />
           ))}
@@ -66,6 +68,13 @@ export default function Home() {
             supporting a worthy cause. Reserve your tickets now for an evening of glamour, goodwill, and giving back.
           </p>
         </article>
+        <div>
+
+        <h2 className='text-purple-800 text-4xl font-semibold mb-4'>Testimonial</h2>
+        <div className='flex justify-center'>
+          <Slider />
+        </div>
+        </div>
       </Container>
     </main>
   );

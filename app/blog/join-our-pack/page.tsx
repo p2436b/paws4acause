@@ -1,5 +1,4 @@
-import Container from '@/app/components/Container';
-import React from 'react';
+import Container from '@/components/Container';
 
 export default function Blog() {
   return (
