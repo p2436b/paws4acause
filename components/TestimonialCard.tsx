@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function TestimonialCard() {
   return (
-    <article className='text-center text-gray-500 max-w-96 p-4 border-2 rounded-xl overflow-hidden bg-white z-10 sh'>
+    <article className='text-center text-gray-500 max-w-96 rounded-xl overflow-hidden bg-white z-10 sh'>
       <header className='mb-4'>
         <div className='relative inline-block'>
           <Image
