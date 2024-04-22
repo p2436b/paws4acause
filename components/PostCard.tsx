@@ -13,7 +13,7 @@ export default function PostCard({ title, description, imageUrl, href, date }: I
   return (
     <Link href={href} className='group border-2 rounded-md overflow-hidden shadow-md z-10 bg-white'>
       <div className='group-hover:scale-110 duration-700 relative h-48'>
-        <Image src={imageUrl} fill alt='' className='object-cover' />
+        <Image src={imageUrl} fill sizes='400px' alt='' className='object-cover' />
       </div>
       <div className='p-6'>
         <p className='flex items-center gap-2 mb-4 text-gray-500 text-sm'>
