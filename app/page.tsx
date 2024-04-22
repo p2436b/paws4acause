@@ -69,11 +69,10 @@ export default function Home() {
           </p>
         </article>
         <div>
-
-        <h2 className='text-purple-800 text-4xl font-semibold mb-4'>Testimonial</h2>
-        <div className='flex justify-center'>
-          <Slider />
-        </div>
+          <h2 className='text-purple-800 text-4xl font-semibold mb-4'>Testimonial</h2>
+          <div className='flex justify-center'>
+            <Slider />
+          </div>
         </div>
       </Container>
     </main>
