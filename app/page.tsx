@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Container from '@/components/Container';
 import StatisticsCard from '@/components/StatisticsCard';
 import TestimonialCard from '@/components/TestimonialCard';
-import Slider from '@/components/Slider';
+import Slider from '@/components/TestimonialSlider';
 
 const statistics = [
   { title: 'Animals Rescued', value: 180 },
