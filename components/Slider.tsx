@@ -16,13 +16,13 @@ export default function Slider() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
   return (
-    <div className='flex gap-8'>
+    <div className='flex gap-4 md:gap-8 max-w-xs md:max-w-lg'>
       <button className='embla__prev' onClick={scrollPrev}>
         <ChevronLeftIcon className='size-6'/>
       </button>
-      <div className='overflow-hidden max-w-96' ref={emblaRef}>
-        <div className='flex gap-8'>
-          <div className='grow-0 shrink-0 basis-full'>
+      <div className='overflow-hidden ' ref={emblaRef}>
+        <div className='flex gap-4'>
+          <div className='grow-0 shrink-0 basis-full min-w-0'>
             <TestimonialCard />
           </div>
           <div className='grow-0 shrink-0 basis-full min-w-0'>
