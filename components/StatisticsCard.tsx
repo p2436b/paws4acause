@@ -3,7 +3,7 @@
 import { animate, motion, motionValue, useInView, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-export default function StatisticsCard({ title, value }: { title: string; value: number }) {
+export default function StatisticsCard({ title, value, percent }: { title: string; value: number; percent?: boolean }) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 	const count = motionValue(0);
@@ -19,10 +19,11 @@ export default function StatisticsCard({ title, value }: { title: string; value:
 				whileInView={{ scaleY: [0, 1], transition: { duration: 2, ease: 'easeInOut' } }}
 				viewport={{ once: true }}
 				className='absolute bg-gradient-to-br from-pink-300 to-fuchsia-500 inset-0 origin-bottom'></motion.div>
-			<p className='mb-6 text-xl z-10 font-semibold'>{title}</p>
-			<motion.p ref={ref} className='text-5xl font-semibold z-10 drop-shadow'>
-				{rounded}
-			</motion.p>
+			<p className='mb-6 text-2xl z-10 font-semibold'>{title}</p>
+			<div className='flex text-5xl font-semibold z-10 drop-shadow gap-2'>
+				<motion.p ref={ref}>{rounded}</motion.p>
+				{percent ? <span>%</span> : <></>}
+			</div>
 		</div>
 	);
 }
